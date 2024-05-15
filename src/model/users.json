@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Sherali",
+        "username": "sherali01",
+        "password": "998907782134",
+        "phoneNumber": "998907782134",
+        "role": "student",
+        "course": "Frontend",
+        "group": "#nt127"
+    },
+    {
+        "id": 2,
+        "name": "Abduvali",
+        "username": "abduvali01",
+        "password": "998947896895",
+        "phoneNumber": "998947896895",
+        "role": "student",
+        "course": "Backend",
+        "group": "#nt119"
+    },
+    {
+        "id": 7,
+        "name": "Saud",
+        "username": "saud01",
+        "password": "998949293822",
+        "phoneNumber": "998949293822",
+        "role": "teacher",
+        "course": "Foundation"
+    },
+    {
+        "id": 9,
+        "name": "Dilsora",
+        "username": "dilsora01",
+        "password": "998945560121",
+        "phoneNumber": "998945560121",
+        "role": "admin"
+    },
+    {
+        "id": 10,
+        "name": "Eshmat",
+        "username": "userw",
+        "password": "999498994",
+        "phoneNumber": "76637283772",
+        "role": "student",
+        "course": "Smm",
+        "group": "#nt112"
+    },
+    {
+        "id": 11,
+        "name": "Toshmat",
+        "username": "toshmat01",
+        "password": "998935386424",
+        "phoneNumber": "998935386424",
+        "role": "student",
+        "course": "Foundation",
+        "group": "foundation"
+    },
+    {
+        "id": 12,
+        "name": "Munisa",
+        "username": "munis01",
+        "password": "998945617888",
+        "phoneNumber": "998945617888",
+        "role": "teacher",
+        "course": "Smm"
+    },
+    {
+        "id": 13,
+        "name": "Shaxlo",
+        "username": "shaxlo01",
+        "password": "998935230525",
+        "phoneNumber": "998935230525",
+        "role": "teacher",
+        "course": "Backend"
+    },
+    {
+        "id": 14,
+        "name": "Nargiza",
+        "username": "nargiz01",
+        "password": "998975684959",
+        "phoneNumber": "998975684959",
+        "role": "teacher",
+        "course": "Frontend"
+    }
+]

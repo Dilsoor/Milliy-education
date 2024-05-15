@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  />
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="main.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <section class="login">
+      <div class="login__container">
+        <h1 class=" crm-logo">MILLIY EDUCATION</h1>
+        <form class="login__form" action="/login", method="POST">
+          <div class="login__username">
+            <span><i class="fas fa-user"></i></span>
+            <input
+              class="input-login"
+              type="text"
+              placeholder="Username"
+              name="name"
+              autocomplete="off"
+            />
+          </div>
+          <div class="login__username">
+            <span><i class="fas fa-unlock"></i></span>
+            <input
+              class="input-password"
+              type="password"
+              placeholder="Password"
+              name="password"
+            />
+          </div>
+          <p id="loginError" class="login__error text-danger visually-hidden">
+            Login yoki parol xato !
+          </p>
+
+          <button class="login__btn" type="submit">Login</button>
+          <p class="login__forgot">Forgot password?</p>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "#nt119",
+        "course": "Backend",
+        "teacher": "Shaxlo"
+    },
+    {
+        "id": 2,
+        "name": "#nt127",
+        "course": "Frontend",
+        "teacher": "Nargiza"
+    },
+    {
+        "id": 3,
+        "name": "#nt112",
+        "course": "Smm",
+        "teacher": "Munisa"
+    },
+    {
+        "id": 4,
+        "name": "foundation",
+        "course": "Foundation",
+        "teacher": "Saud"
+    },
+    {
+        "id": 5,
+        "name": "#test",
+        "course": "Backend",
+        "teacher": "Nargiza"
+    }
+]

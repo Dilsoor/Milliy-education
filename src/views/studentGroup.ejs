@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <div class="admin">
+        <!-- SIDEBAR -->
+
+      <div class="admin-left">
+        <h1 class="crm-logo fs-3 text-center mt-4 mb-5">MILLIY EDUCATION</h1>
+        <%- include('./partials/studentSidebar.ejs') %>
+      </div>
+
+      <!-- CRM RIGHT SECTION -->
+
+      <div class="admin-right pt-0  ">
+          <div class="right-header d-flex pt-2 mb-3">
+              <div class=" d-flex align-items-center ms-auto">
+                  <p class="userdesc m-0 fs-2 me-2"><%= user %>  </p>
+                  <span class="user-profile"><i class="fa-regular fa-user"></i></span>
+              </div>
+          </div>
+
+          <div class=" position-relative">
+              <h2 class="right-heading text-center fs-1 mb-3">Guruhlar</h2>
+        </div>
+
+          <ul class="rightCenter-Header d-flex justify-content-between">
+            <li class="data-item">Kurs nomi</li>
+            <li class="data-item">Guruh nomi</li>
+            <li class="data-item">O'qituvchi</li>
+            <li class="data-item">Vazifa</li>
+        </ul>
+
+        <div class="right-center ">
+            <ul class="rightCenter-list list-unstyled p-0 pt-2 pb-2">
+                <li class="right-item ">
+                    <% groups.map(e => { %>
+                        <ul class=" right-list d-flex justify-content-between p-2 list-unstyled">
+                            <li class="data-item"><%= e.course %> </li>
+                            <li class="data-item"><%= e.name %> </li>
+                            <li class="data-item"><%= e.teacher %> </li>
+                            <li class="data-item"> <button  class="add-btn bg-transparent border-info" style="right: 0;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Vazifa</button></li>
+                        </ul>
+                        <% }) %>
+                 </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- OFFCANVAS -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <h2 class=" text-center text-info mt-5 mb-5">Vazifalar</h2>
+        <form action="" class="form d-flex flex-column align-items-center justify-content-center">
+            <div class=" w-75 ">
+
+            <ol class="p-0 mb fs-5">
+                <% tasks.map(e => { %>
+                    <li> <%= e.desc %> </li>
+                <%  }) %>
+                </ol>
+        </form>
+
+    <script src="bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

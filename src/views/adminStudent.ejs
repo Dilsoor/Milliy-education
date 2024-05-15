@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <div class="admin">
+        <!-- SIDEBAR -->
+
+      <div class="admin-left">
+        <h1 class="crm-logo fs-3 text-center mt-4 mb-5">MILLIY EDUCATION</h1>
+        <%- include('./partials/adminSidebar.ejs') %>
+      </div>
+
+      <!-- CRM RIGHT SECTION -->
+
+      <div class="admin-right pt-0  ">
+          <div class="right-header d-flex pt-2 mb-3">
+              <div class=" d-flex align-items-center ms-auto">
+                  <p class="userdesc m-0 fs-2 me-2"><%= user %>  </p>
+                  <span class="user-profile"><i class="fa-regular fa-user"></i></span>
+              </div>
+          </div>
+
+          <div class=" position-relative">
+              <h2 class="right-heading text-center fs-1 mb-3">O'quvchilar</h2>
+              <button class="add-btn position-absolute  bg-transparent border-info" style="right: 0;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Qo'shish</button>
+        </div>
+
+          <ul class="rightCenter-Header d-flex justify-content-between">
+            <li class="data-item">Ismi</li>
+            <li class="data-item">Telefon Raqami</li>
+            <li class="data-item">Kursi</li>
+            <li class="data-item">Guruhi</li>
+            <li class="data-item">O'chirish</li>
+        </ul>
+
+        <div class="right-center ">
+            <ul class="rightCenter-list list-unstyled p-0 pt-2 pb-2">
+                <li class="right-item ">
+                    <% students.map(e => { %>
+                        <ul class=" right-list d-flex justify-content-between p-2 list-unstyled">
+                            <li class="data-item"><%= e.name %> </li>
+                            <li class="data-item"><%= e.phoneNumber %> </li>
+                            <li class="data-item"><%= e.course %> </li>
+                            <li class="data-item"><%= e.group %> </li>
+                            <li class="data-item"><form method="post"  class=" d-inline-block bg-transparent" action="/adminDeleteStudent">
+                                <input class=" visually-hidden" name="id" value=<%= e.id %>  type="text">
+                                <button type="submit" data-delete-btn=<%= e.id %>  class=" deleteTeacher  bg-transparent border-0"><i class="fa-solid fa-trash"></i></button></form></li>
+                        </ul>
+                        <% }) %>
+                 </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- OFFCANVAS -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <h2 class=" text-center text-info mt-5 mb-5">O'quvchi qo'shish</h2>
+        <form action="/adminStudent" method="post" class="form d-flex flex-column align-items-center justify-content-center">
+            <div class=" w-75 ">
+                <label class=" form-label" for="name">Ismni kiriting</label>
+            <input autocomplete="off" name="name" class="form-control mb-2" type="text" placeholder="Ism">
+            </div>
+            <div class="w-75 mb-3">
+                <label class=" form-label" for="phoneNumber">Telefon raqamini kiriting</label>
+               <input autocomplete="off" name="phoneNumber" class="form-control  mb-2" type="number" placeholder="Telefon Raqami">
+            </div>
+
+            <div class="w-75 mb-3">
+                <label class=" form-label" for="username">Username kiriting</label>
+               <input autocomplete="off" name="username" class="form-control  mb-2" type="text" placeholder="Username">
+            </div>
+
+            <div class="w-75 mb-3">
+                <label class=" form-label" for="password">Parol kiriting</label>
+               <input autocomplete="off" name="password" class="form-control  mb-2" type="text" placeholder="Parol">
+            </div>
+
+            <select class="form-select w-75 mb-3" name="group" id="">
+                <option disabled selected>Guruhni tanlang</option>
+                <% groups.map(e => { %>
+                    <option value=<%= e.name %> ><%= e.name %> </option>
+                <%  }) %>
+            </select>
+            <button class="btn btn-outline-info">Qo'shish</button>
+        </form>
+
+    <script src="bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

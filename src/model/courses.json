@@ -1,0 +1,22 @@
+[
+    {
+        "id": 2,
+        "name": "Backend",
+        "price": "800000"
+    },
+    {
+        "id": 3,
+        "name": "Frontend",
+        "price": "500000"
+    },
+    {
+        "id": 5,
+        "name": "Foundation",
+        "price": "2000000"
+    },
+    {
+        "id": 6,
+        "name": "SMM",
+        "price": "700000"
+    }
+]
